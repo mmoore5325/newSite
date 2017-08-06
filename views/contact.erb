@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script> 
+    <link rel = "stylesheet" type = "text/css" href = "./css/index.css" />
+</head>
+<body>
+<div id="thanks">
+<h3 class="responsive_center" style="color:green;"><b><%=thanksmessage%></b></h3>
+</div>
+<div class="contact">
+    <div id="mailbox">
+        <p id="emailme">Email me!</p>
+        <form class="emailfieldz" method="post" action="/contact">
+            <input class="emailfields" id="fname" type="text" width="75px" name="fname" placeholder="First Name" required><br>
+            <input class="emailfields" id="fname" type="text" width="75px" name="lname" placeholder="Last Name" required><br>
+            <input class="emailfields" id="email" type="text" width="75px" name="email" placeholder="Email" required><br>
+            <input class="emailfields" id="fname" type="text" width="75px" name="subject" placeholder="Subject" required><br>
+            <input class="emailfields" id="emailbox" type="text" width="125px" name="message" placeholder="Message" height="284px" required><br>
+            <input id="emailsubmit" type="submit" value="Contact me!"><br>
+        </form>
+    </div>
+</div>
+
+    
+
+<script>
+
+</script>
+</body>
+</html>
