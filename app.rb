@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'mail'
 require 'aws-sdk'
+set :port, 80
 load "./local_env.rb" if File.exists?("./local_env.rb")
 
 Mail.defaults do
