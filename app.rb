@@ -2,7 +2,8 @@ require 'sinatra'
 require 'mail'
 require 'aws-sdk'
 set :port, 80
-load "./local_env.rb" if File.exists?("./local_env.rb")
+# load "./local_env.rb" if File.exists?("./local_env.rb")
+require_relative 'local_env.rb'
 
 Mail.defaults do
   delivery_method :smtp,
@@ -53,7 +54,7 @@ post '/contact' do
     email= params[:email]
     message = params[:message]
     subject= params[:subject]
-    email_body = erb(:email,:layout=>false, :locals=>{:fnmae => firstname, :lname => lastname, :email => email, :subject => subject, :message => message})
+    email_body = erb(:email,:layout=>false, :locals=>{:fname => firstname, :lname => lastname, :email => email, :subject => subject, :message => message})
 
     mail = Mail.new do
       from         ENV['from']
